@@ -1437,36 +1437,22 @@ public class mxCoordinateAssignment implements mxHierarchicalLayoutStage
 		 * @return the standard return you would expect when comparing two
 		 *         double
 		 */
-		public int compareTo(Object arg0)
-		{
-			if (arg0 instanceof WeightedCellSorter)
-			{
-				if (weightedValue > ((WeightedCellSorter) arg0).weightedValue)
-				{
-					return -1;
-				}
-				else if (weightedValue < ((WeightedCellSorter) arg0).weightedValue)
-				{
-					return 1;
-				}
-				else
-				{
-					if (nudge)
-					{
-						return -1;
-					}
-					else
-					{
-						return 1;
-					}
-				}
-			}
-			else
-			{
-				return 0;
-			}
-		}
+        public int compareTo(Object arg0)
+        {
+            if (arg0 instanceof WeightedCellSorter)
+            {
+                if (weightedValue > ((WeightedCellSorter) arg0).weightedValue)
+                {
+                    return -1;
+                }
+                else if (weightedValue < ((WeightedCellSorter) arg0).weightedValue)
+                {
+                    return 1;
+                }
+            }
 
+            return 0;
+        }
 	}
 
 	/**

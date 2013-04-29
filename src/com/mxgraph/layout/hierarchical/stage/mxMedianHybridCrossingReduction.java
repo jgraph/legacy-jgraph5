@@ -632,36 +632,27 @@ public class mxMedianHybridCrossingReduction implements
 		 * @return the standard return you would expect when comparing two
 		 *         double
 		 */
-		public int compareTo(Object arg0)
-		{
-			if (arg0 instanceof MedianCellSorter)
-			{
-				if (medianValue < ((MedianCellSorter) arg0).medianValue)
-				{
-					return -1;
-				}
-				else if (medianValue > ((MedianCellSorter) arg0).medianValue)
-				{
-					return 1;
-				}
-				else
-				{
-					if (nudge)
-					{
-						return -1;
-					}
-					else
-					{
-						return 1;
-					}
-				}
-			}
-			else
-			{
-				return 0;
-			}
-		}
-
+        public int compareTo(Object arg0)
+        {
+            if (arg0 instanceof MedianCellSorter)
+            {
+                if (medianValue < ((MedianCellSorter) arg0).medianValue)
+                {
+                    return -1;
+                }
+                else if (medianValue > ((MedianCellSorter) arg0).medianValue)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
 	}
-
 }
