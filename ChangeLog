@@ -1,0 +1,1155 @@
+17-FEB-2010: JGraph 5.14.0.0
+
+- Introduce bridge to mxGraph (JGraphX).
+- Hierarchical layout from mxGraph now used in place of old hierarchical
+	via mxGraph bridge. Improves edge routing.
+
+31-MAR-2010: JGraph 5.13.0.4
+
+- Fixes Ant example build
+
+29-JAN-2010: JGraph 5.13.0.3
+
+- Checks JGraph isSelectionEnabled() on JTree select all event
+
+17-DEC-2009: JGraph 5.13.0.2
+
+- Removes ant dist build option and makes jar default
+
+14-OCT-2009: JGraph 5.13.0.1
+
+- Fixes refresh of graph when pressing escape during a drag
+
+25-SEP-2009: JGraph 5.13.0.0
+
+- Moved layout functionality into core JGraph package
+- Changed license to BSD
+
+24-SEP-2009: JGraph 5.12.4.2
+
+- Fixes JGraph.setPortsVisible() to always refresh
+
+12-AUG-2009: JGraph 5.12.4.1
+
+- Adds buffer to offscreen resize for less frequent allocations
+
+12-JUN-2009: JGraph 5.12.4.0
+
+- Added transaction API to graph model
+- Fix in BasicGraphUI for changing L&F
+
+06-APR-2009: JGraph 5.12.3.2
+
+- Edge renderer paint more granular
+- Adds refresh method to repaint entire graph
+
+25-FEB-2009: JGraph 5.12.3.1
+
+- Fixes XML persistence for partial graph layout caches
+- Adds GraphLayoutCache.update method
+
+12-FEB-2009: JGraph 5.12.3.0
+
+- Fixes highlight and preview for new edges in GraphEd
+- Fixes highlight and preview in EdgeView
+- Switches off D3D for all examples
+
+06-FEB-2009: JGraph 5.12.2.3
+
+- Fixes cell view hit detection tolerance at high zoomed in levels
+
+05-JAN-2009: JGraph 5.12.2.2
+
+- Adds EdgeRenderer.HIT_LABEL_EXACT switch for label hit detection
+- Redraws on setting grid invisible
+
+13-NOV-2008: JGraph 5.12.2.1
+
+- Fixes placement of labels on non-curved parallel edges
+- Fixes GraphCancelEditingAction.isEnabled to check editing state
+- Removes build and special code regions for Java 1.3
+- Fixes possible NPE for non-empty selection when setting layout cache
+- Fixes possible NPE when using JGraph on server-side
+
+17-SEP-2008: JGraph 5.12.2.0
+
+- Fixes dirty rectangle for selection changes in scrolled graphs
+- Fixes cut, copy and paste icon in toolbar
+- Fixes empty ports field in layout cache after deserialization
+
+25-AUG-2008: JGraph 5.12.1.3
+
+- Adds null check for tmpBounds in RootHandle constructor
+- Fixes artifacts for rubber-band selection with double buffering
+
+23-JUNE-2008: JGraph 5.12.1.2
+
+- Adds removal of offset during label preview
+- Updates preferred size on background image set
+- Adds GLC.setVisible method that includes a nested edit
+- Adds attribute to switch off edge labels
+
+20-MAY-2008: JGraph 5.12.1.1
+
+- Adds check null point zero in getLabelPosition()
+
+08-MAY-2008: JGraph 5.12.1.0
+
+- Fixes condition where orthogonal routing sometimes drew straight edge
+- Allows labels to be dragged outside min/max y bounds from edge vector
+- Fixes non-opaque JGraphs to correctly show background components
+- Corrects volatile image size when image restored
+- Adds label position clone
+     http://www.jgraph.com/tracker/bug.php?op=show&bugid=67
+- Fixes artifacts of handles for scaled selection events
+- Corrects output of getLabelPosition()
+- Removes implicit label offset from label position calculation
+- Fixes repaint of grid when made visible
+- Allows for clip region in background paint
+- Avoids deselecting on popup menu event
+
+17-MAR-2008: JGraph 5.12.0.4
+
+- Fixes possible double buffer repaint issue where cells made invisible
+
+07-MAR-2008: JGraph 5.12.0.3
+
+- Clears double buffer of background changes
+- Avoids unnecessary repaint on double buffer recreation
+- Fixes possible NPE in JGraph.addOffscreenDirty
+
+29-FEB-2008: JGraph 5.12.0.2
+
+- Adds RectUtils.union for adding possibility null rects
+- Fixes incorrect GLC dirty region by ensuring region is cloned
+- Clears off-screen buffer in cases of model or GLC change on graph
+
+23-FEB-2008: JGraph 5.12.0.1
+
+- Fixes selection double buffer dirty region on scaling
+- Fixes double buffer repaint sequence on zoom out
+
+19-FEB-2008: JGraph 5.12.0.0
+
+- Removes legacy painting mechanism
+- Fixes XOR overlay painting
+- Added per-graph dirty region storage for component independent repainting
+- Added dirty region to layout cache and model events
+- Adds check for available memory before attempting to allocate double buffer
+
+31-JAN-2008: JGraph 5.11.0.1
+
+- Fixes clipping to include auto/resized vertices
+- Fixes clip region of handles when zoomed
+
+30-JAN-2008: JGraph 5.11.0.0 Beta 1
+
+- Adds optimised spline drawing methods
+- Adds calculation of exact dirty drawing region and uses in double buffering
+
+24-JAN-2008: JGraph 5.10.2.1
+
+- Fixes edge label cropping when zoomed
+
+29-NOV-2007: JGraph 5.10.2.0
+
+- Uses JGraph 5.9.x painting for correct transparency of component
+- Fixes move below zero for groups (tracker 4)
+
+11-SEP-2007: JGraph 5.10.1.5
+
+- DefaultGraphModel update methods call superclass methods only
+- Fixed mouse event offset while dragging edge labels
+- addPort() method changed to return newly created port
+- Adds parallel router to core
+
+30-JUL-2007: JGraph 5.10.1.4
+
+- Fixes snapping to grid for moving more than MAXCELLS cells
+- Fixes rounding errors in BasicGraphUI.RootHandle.mouseDragged
+- Fixes relative edge label positions
+- Adds handling of window close event in EditorGraph example
+
+16-JUL-2007: JGraph 5.10.1.3
+
+- Fixes background repainting on XOR dragging issues
+
+30-MAY-2007: JGraph 5.10.1.2
+
+- Fixes out of visible area painting issues
+
+24-MAY-2007: JGraph 5.10.1.1
+
+- Fixes offscreen positioning for relatively positioned container
+- Corrects user manual font issue.
+
+07-MAY-2007: JGraph 5.10.1.0
+
+- Fixes marquee selection artifacts on autoscrolling
+- Uses absolute offsets for better combined edge label positions
+- Adds EdgeHandle.getRelativeLabelPosition for relative label positioning
+- Adds EdgeRenderer.getRelativeLabelPosition for better label positions
+- Added GraphLayoutCache parameter to refresh, update and route methods
+- Adds getPortSize() and setPortSize() so custom ports may override static value
+- Adds check for edge visibility in getNeighbours
+- Ungrouping now only removes ports of removed cells
+      see bug #36 - http://www.jgraph.com/tracker/bug.php?op=show&bugid=36
+- Added groupsEditable flag to JGraph
+- Fixed scale centering for zoom less than 1
+- DefaultRouter does no longer add control points that overlap source or target
+- Fixes ordering issues in model
+- Adds removeEmptyGroups switch in DefaultGraphModel
+- Adds moveBeyondGraphBounds to JGraph to constrain dragging to graph bounds
+- Adds constrainDrag() in rootHandle for controlling where dragging is allowed
+- build.xml references examples main in com rather than org package
+- isVertex now returns false for null vertex parameter
+      see bug #28 - http://www.jgraph.com/tracker/bug.php?op=show&bugid=28
+- Removed setting of initialLocation in RootHandle.mouseReleased to null
+      see bug #27 - http://www.jgraph.com/tracker/bug.php?op=show&bugid=27
+- Fixes edge label repaint on Macs
+- Fixes marquee color and repaint on Macs
+- Selection on insertion defaults to false
+- Adds link attribute to GraphConstants
+
+03-AUG-2006: JGraph-5.10.0.1 Beta 2
+
+- Fixes possible NPE during grid repainting
+- Fixes non-accelerated buffered image not always created when graph changes size
+- Corrects background repaint to allow for clip bounds
+- Reduces repaint area using clip bounds
+- Corrects clip bounds bug when renderering non-accelerated double buffer
+
+30-JUL-2006: JGraph-5.10.0.0 Beta 1
+
+- Changes selection in default selection model from ArrayList to LinkedHashSet
+- Improves double buffering image retention across operations
+- Minimum Java version now 1.4
+
+25-JUL-2006: JGraph-5.9.2.0-Cardiff
+
+- Corrects old value on selection enable change in JGraph
+- Improves performance when removing cells
+- Improves performance when making cells invisible
+- Adds static helper method DefaultGraphModel.getRootsAsCollection()
+- Adds support for Component to be used as graph background
+
+11-JUL-2006: JGraph-5.9.1.0-Berlin
+
+- Adds background image support
+- Adds port.gif to free distribution
+- Fixes incorrect first paint in GraphEdX
+
+06-JUL-2006: JGraph-5.9.0.0-Berlin
+
+- Moves double buffering image to JGraph to share more effectively
+- Removes labels caching and label bounds methods from EdgeView
+
+22-JUN-2006: JGraph-5.8.3.2-Munich
+
+- Changes getInsertionOffset to protected
+
+21-JUN-2006: JGraph-5.8.3.1-Munich
+
+- Adds case in handleAttributes to allow for correct removal of the user object
+- Adds getInsertionOffset hook in GraphTransferHandler to position cloned cells
+- Corrects NPE possibly caused in EdgeRenderer.getLabelPosition()
+- Adds JPanel vertex example
+
+14-JUN-2006: JGraph-5.8.3.0-Munich
+
+- Various example additions and improvements
+- Fixes leak on Macs by not using XOR painting in marquee, handles & port renderer
+- Corrected memory display on GraphEd status bar
+
+07-JUN-2006: JGraph-5.8.2.3-Malibu
+
+- Add Port Labels example
+
+29-MAY-2006: JGraph-5.8.2.2-Los Angeles
+
+- Fixes infinite loop when null cell passed into remove()
+- Deprecates GraphConstants.getValue, use GraphModel instead
+
+23-MAY-2006: JGraph-5.8.2.1-San Francisco
+
+- Adds manual dispose() calls to assist Apple JVM GC reclaim memory
+
+17-MAY-2006: JGraph-5.8.2-San Francisco
+
+- Adds com.jgraph examples to free distribution
+- Adds getPartial in GraphLayoutCache to fix persistence problem
+
+02-MAY-2006: JGraph-5.8.1.1-Vienna
+
+- Fixes preview of children for context edges in GraphContext
+
+30-APR-2006: JGraph-5.8.1.0-Vienna
+
+- Fixes XMLEncoding/Serialization for file I/O in GraphEdX
+- Adds serialization for weak hash map in GraphLayoutCache
+- Scaling now centers zoom correctly
+- Adds JGraph.getCenterPoint method
+- EdgeView.getPointCount checks for points being null before using
+- Calls marquee handler for toggle events if isForceMarquee returns true
+- Adds edgeLabelMovable switch to graph to prevent edge label movement
+- Corrects NPE editing null edge labels when setAutoSizeOnValueChange is true
+- Makes AbstractCellView.editor public so it can be changed
+
+16-MAR-2006: JGraph-5.8.0.0-Vienna
+
+- Uses weak graph reference in EdgeRenderer
+- Adds MyCellView demo demonstrating cell view factory usage
+- Adds GraphSelectionDemo, demonstrating graph selection events
+
+28-FEB-2006: JGraph-5.7.4.8-London
+
+- Adds PREVIEW_EDGE_GROUP global switch to GraphContext class
+- Uses CompoundVertexView for groups in GraphEd (Thanks to Jerry Pulley!)
+- Creating default bounds in GraphEd.group for new group cells
+- Changes AbstractCellView.translate and scale to public visibility
+- Disposes graphics in JGraph.getImage to clean-up resources
+
+20-FEB-2006: JGraph-5.7.4.7-London
+
+- User Manual freely available
+
+30-JAN-2006: JGraph-5.7.4.6-London
+
+- Fixes minor problems with port magic
+- Undeprecates the PortView.getLocation(CellView) method
+- Fixes issue with floating port location when edge also connects to fixed port
+- Updates HashSet in handleParentMap() accordingly with model roots
+
+03-JAN-2006: JGraph-5.7.4.5-London
+
+- Makes hiddenMapping a WeakHashMap to avoid possible memory leak
+- Adds removeViewLocalAttribute() helper method
+- Lazily instantiates removeAttribute set in AttributeMap for performance
+- Adds addPort(Point2D) method to DefaultGraphCell
+- Adds isVertex() helper method to DefaultGraphModel
+- Removes ununsed settingUI variable from JGraph
+- Cache roots in HashSet for performance in handleParentMap()
+- Optimises setting cursor in BasicGraphUI.MouseHandler.mouseMoved()
+- Moves createEdgeView method into factory (in GraphEd)
+- Improves performance of Bezier edge creation
+- Adds JGraph.getPortViewAt with custom tolerance
+
+08-DEC-2005: JGraph-5.7.4.4-London
+
+- Adds XMLEncoding of JGraph instance example to GraphEdX
+- Adds serialization of JGraph instance example to GraphEdX
+- GraphEd adds (un)installListeners hook for subclassers
+- Listener list in GraphLayoutCache is no longer transient
+- Adds SerialGraph serialization example to commercial distribution
+- Adds marquee handler as an optional serializable field
+- Fixes searching for closest control point when adding points
+- Fixes selection check in BasicGraphUI.MouseHandle.mousePressed
+
+05-DEC-2005: JGraph-5.7.4.3-London
+
+- Adds layout cache de-/serialization example to GraphEdX
+- Fixes de-/serialization of layout cache (no listeners)
+- Fixes wrong use of transient modifiers in various classes
+- Adds hook for processing loaded graph layout caches in GraphEdX
+- Adds hook to configure encoder in GraphEdX
+- Optimizes focus clearing after removing, fixes focus after inserting
+- Fixes duplicate call to getDescendants when creating transferable
+- GraphEd checks null in createGraphCell before using grid
+- Adds new hook to GraphEd for populating the content pane
+
+25-NOV-2005: JGraph-5.7.4.2-Shanghai
+
+- Makes invalidate in EdgeView protected
+- Fixes an issue with artifacts being left on the display with dragging cells
+
+16-NOV-2005: JGraph-5.7.4.1-Shanghai
+
+- Improvements to the JGraph User Manual Exporting section
+- Adds automatic resizing and flag to JGraph (Thanks to Rene Voss!)
+- Layout Cache now partial in GraphEdX
+
+01-NOV-2005: JGraph-5.7.4-Shanghai
+
+- Adds XML encoding/decoding to GraphEdX
+- DefaultCellViewFactory is Serializable
+- Adds createMarqueeHandler hook in GraphEd example
+- Makes gradientColor in EdgeRenderer protected
+- JGraph.getImage uses print instead of paint to draw graphics
+- Moves grouping into GraphEdX example and adds persistance
+- Fixes undoable edit relay condition in DefaultGraphModel
+
+05-OCT-2005: JGraph-5.7.3.1-Shanghai
+
+- Fixes static initialization block ordering issues
+
+27-SEP-2005: JGraph-5.7.3-Shanghai
+
+- Adds getBounds for an array of cellviews to GraphLayoutCache
+- Fixes possible headless errors in BasicGraphUI.installDefaults
+- Fixes possible headless errors in AbstractCellView, EdgeRenderer, VertexView
+- Fixes GraphConstants class initializer headless support
+- Adds getAllViews to GraphLayoutCache
+- Adds showCells method in GraphLayoutCache
+- Moves adding of edits to createEdit, removes createInsert/RemoveEdit
+- Adds DefaultGraphModel.edit method for combined edits
+- Adds switch to disable all port magic in PortView
+
+06-SEP-2005: JGraph-5.7.2-Shanghai
+
+- Removes paintingContext argument from EdgeRenderer.getLabelSize method
+- Fixes cloning order in DefaultGraphModel.cloneCells to include all parents
+- Changes the cloneCell method signature in DefaultGraphModel (no parent)
+- Adds setParent helper method in DefaultGraphModel
+- EdgeView.getLabelVector returns different values for loops and normal edges
+- AbstractCellView.translate uses all attributes instead of view-local
+- GraphLayoutCache.translateViews calls AbstractCellView.translate for locked group positions
+- Fixes locked width or height locks child position in group resize
+- Fixes scaling takes into account sizeable axis for groups
+- Fixes handling of connectable attribute in EdgeHandle
+
+31-AUG-2005: JGraph-5.7.1-Shanghai
+
+- Adds showsInvisibleEditedCells, showsInsertedCells switches to layout cache
+- Adds collapseXScale, collapseYScale properties to layout cache
+- Adds movesParentsOnCollapse, resizesParentsOnCollapse switches
+- Automatically updates the parent location (size optional) on collapse
+- Adds GraphLayoutCache.toggleCollapsedState helper method
+- AttributeMap clones extra label positions (point2d arrays)
+
+29-AUG-2005: JGraph-5.7-Shanghai
+
+- Fixes possible NPE in JGraph(GraphLayoutCache) c'tor
+- Fixes possible NPE in AbstractCellView.updateGroupBounds
+- Fixes possible NPE in PortView.getBounds for null locations
+- AttributeMap.applyValue replaces port views in lists
+- Fixes possible NPE in RootHandle.mouseDragged (adding dirty region)
+- AbstractCellView.includeInGroupBounds handles promoted edges
+- GraphLayoutCacheEdit.execute refreshes all changed cells
+- EdgeHandle.createConnectionSet takes edge promotion into account
+- EdgeView keeps manual control points while routing is active
+- Adds preferred linestyle (for renderer) to routing interface
+- Fixes all routers to conform with new interface
+- Fixes model to keep edge in port if opposite connected to same port
+- Adds DefaultEdge.LoopRouting routing base class with control logic
+- Adds default routing for loops in GraphConstants
+- Changes Edge.Routing interface to return a point list
+- Adds EdgeView.isLoop method to find self-references
+- Fixes NPE when disconnecting promoted edges
+- Adds movesChildrenOnExpand switch to layout cache
+- Keeps source/target for promoted edges hidden
+- Blocks connecting of edges to themselfes
+
+10-AUG-2005: JGraph-5.6.3.1-Fire
+
+- Corrects corruption in User Manual pdf
+- Removes unused variables
+
+07-AUG-2005: JGraph-5.6.3-Fire
+
+- Adds alwaysReceiveAsCopyAction switch to GraphTransferHandler
+- Changed example package names
+- Using Unix file endings in all files
+- Moved IconAnimator and IconExample to free distros
+- VertexRenderer and PortRenderer do not keep a reference to the graph
+- Uses locked handle color to paint selected and focused cell borders
+- Repaints focused cell area after selection change
+- Scales tolerance in JGraph.getNextViewAt
+- Removes unused colorspace variable in JGraph
+- Edge renderer allows linewidths of zero (only paints labels)
+- Adds isPopupTrigger checks to EdgeView.isAdd/RemovePointEvent
+- Moves setXORMode from BasicGraphUI.paint to MarqueeHandler.paint
+
+31-JUL-2005: Jgraph-5.6.2.1-Fire
+
+- Fixes lazy creation of undo map breaks undo history
+
+29-JUL-2005: Jgraph-5.6.2-Fire
+
+- Added User Manual to commercial distribution
+
+13-JUL-2005: JGraph-5.6.1.1-Fire
+
+- Fixes NPE for JGraphGraphFactory dialog in applet
+- Fixes cells not moved out of groups if move into groups enabled
+
+10-JUL-2005: JGraph-5.6.1-Fire
+
+- Fixes ignored connection changes in EdgeHandle
+- Fixes possible cast exception in VertexView
+- Adds empty constructor to graph layout cache
+- EdgeHandle removes extra labels with shift-clicks
+- DefaultGraphModel.handleConnectionSet does two steps
+- Moves into groups only if not intersecting parent group
+- VertexView uses Rectangle2D for default bounds
+- GraphTransferHandler creates serializable bounds
+- EdgeView.getPerimeterPoint returns edge center
+- EdgeHandle inserts extra labels on label cloning
+- Fixes array store exception in EdgeView.update
+- Fixes class cast exception in GraphConstants.getExtraLabelPositions
+- SizeHandle and EdgeHandle change color if cell is being edited
+- Fixes filtering bug for vertices in GraphLayoutCache.getCells
+- Removes unused opaque attribute in VertexRenderer
+- Adds new helper method getSelectionCellAt to JGraph
+- PortView avoids port magic if parentview is edgeview
+
+27-JUN-2005: JGraph-5.6-Fire
+
+- Checks edges disconnectable state in EdgeHandle, target group scaling
+- Fixes initial editor location for edge labels
+- Adds JGraph.getSelectionCells(Object[]) helper method
+- Fixed missing cloning of bounds in JGraph.getCellBounds
+- Adds getCells helper method in GraphLayoutCache
+- Adds setCollapsedState to graph layout cache for combined (un)folding
+- Changes types of (extra) label position to Point2D
+- Default model getAttributes returns model attributes for null only
+- Moves cells out of groups if not intersecting with parent
+- VertexRenderer no longer resets opaque for null backgrounds
+- Adds new groupOpaque attribute for expanded group transparency
+- AbstractCellView not longer ignores inset if group is opaque
+- Removes invalid connections in GraphTransferHandler.handleExternalDrop
+- Resets DefaultEdge source and target on clone
+- Fixes new group child not removed as roots in layout cache
+- Refreshes context instead of update in GraphLayoutCache
+- Supports new bean properties in BasicGraphUI
+- GraphContext supports edges connected to edges for preview
+- Removes casts to VertexView (allows edges to have ports)
+- EdgeHandle supports new visible parent scheme, adds hooks
+- EdgeView returns perimeter of next visible parent
+- DefaultGraphModel.getEdges uses all descendants (w/ edges)
+- Changes source and target port in DefaultEdge to transient
+- DefaultEdge does no longer clone source and target ports
+- Adds showsChangedConnections switch to graph layout cache
+- Adds default implementations for getPerimeterPoint for edges
+- Adds getPerimeterPoint to CellView interface
+- Moves getCenterPoint to AbstractCellView
+- Adds handleExternalDrop, createTransferable hooks to GraphTransferHandler
+- JGraph.setGridColor/set(Locked)HandleColor/setHandleSize fire property changes
+- Adds bean properties for gridColor, (locked)handleColor & handleSize
+- Adds status bar to GraphEd with heap usage
+- Adds configuration dialog to graph factory
+- AttributeMap.applyValue replaces Point2D with SerializablePoint2D
+- DefaultGraphModel.getRoots can run in linear time by checking model type
+
+21-JUN-2005: JGraph-5.5.3-Picasso
+
+- Adds JGraph.getImage helper method to create images
+- Adds DefaultGraphModel.isGroup static helper method
+- Adds GraphModel.getValue method to get a user object for a cell
+- VertexRenderer invokes installAttributes if leaf or opaque
+- Adds JGraph.getTopmostViewAt helper method
+- Adds getGraphForEvent static helper to BasicMarqueeHandler
+- Adds ParentMap.addEntries and constructor for arrays
+- ReconnectEdgesToVisibleParent takes into account direction
+- Adds moveIntoGroups, moveOutOfGroups switches for dnd-grouping
+- Fixes BasicGraphUI.MouseHandler.mouseReleased and mouseDragged do not check isEnabled
+- EdgeHandle checks disconnectable in mouseDragged instead of mousePressed
+
+16-JUN-2005: JGraph-5.5.2.1-Picasso
+
+- Fixed possible infinite loop in JGraph.getPortViewAt
+
+16-JUN-2005: JGraph-5.5.2-Picasso
+
+- Adds reconnectToVisible switch and hooks in GraphLayoutCache
+- Restores auto-select in JGraphGraphFactory.insertIntoGraph
+- Adds GraphLayoutCache.setVisible(Object[], Object[], ConnectionSet)
+- Adds EdgeView.getNearestPoint hook for custom floating
+- Adds DefaultGraphModel.getConnectionSet and constructor
+- JGraph.getPortViewAt ignores edges for port-jumping
+- VertexRenderer installs attributes if border not null
+- Adds resetAttributes hook to VertexRenderer
+- Adds constructor to ConnectionSet
+- VertexRenderer opaque if no background and gradient color
+
+08-JUN-2005: JGraph-5.5.1.1-Picasso
+
+- Adds examples-only distribution
+- Adds WHATSNEW to distributions
+
+31-MAY-2005: JGraph-5.5.1-Picasso
+
+- EdgeView only sets default label position if label exists
+- Removes unused createFallbackAttributeMap in AbstractCellView
+- Adds checkDefaultLabelPosition hook in EdgeView
+- Clones defaultBounds in VertexView.update
+- Fixes GraphContext.createMapping to only clone the source attributes
+- Fixes possible NPE in BasicGraphUI.getEditorLocation
+- Fixes possible NPE in EdgeRenderer
+- Lazy creation of undo map in AttributeMap.applyMap
+- Makes PortView.getLocation serializable in AttributeMap.clonePoints
+- Replaces unnecessary use of createRect, createPoint in AbstractCellView
+- Fixes MyPortView and GraphEdMv Examples
+- Adds hooks to AbstractCellView for attribute creation and cloning
+- Deprecates changeAttributes from GraphCell interface
+- Moves default checks from DefaultEdge to EdgeView.update
+- Stores fallback-bounds in VertexView.update
+- Adds Adapter Example and Note to commercial version
+- Adds Updating Guide to commercial version
+- Adds getEditorLocation hook in BasicGraphUI
+- Optimizes EdgeView memory footprint in case of no line ends
+- Adds check for label in EdgeRenderer.getLabelBounds before calculating
+- Optimizes memory usage for edges in GeneralPath constructor call
+- Reduces initial size of edge points list to 4
+- Tunes hit detection on edges
+
+24-MAY-2005: JGraph-5.5-Picasso
+
+- Isolates use of EdgeView.getEdgeRenderer to EdgeView (tracker 28/29)
+- Adds typecheck in BasicGraphUI for EdgeView.getRenderer call
+- Fixes negative location of in-place editor for edge labels
+- Fixes labels not moveable for self-references (tracker 68)
+- Fixes cropping of edgelabels in EdgeRenderer
+- VertexView.getPerimeterPoint uses getRenderer method, makes cast
+- Creates Rectangle2D in VertexView
+- Adds valueForCellChanged to GraphModel interface
+
+19-APR-2005: JGraph-5.4.7-Picasso
+
+- Javadocs review
+- Fixes label not moveable for self-references
+- Fixes DefaultEdge.DefaultRouting for self-references
+- Adds nearest point parameter to PortView.getLocation
+
+12-APR-2005: JGraph-5.4.6-Picasso
+
+- Review of javadocs, removing warnings and adding various details
+- Fixes possible division by zero in EdgeRenderer.getLabelPosition
+- Adds GraphLayoutCache.createNestedMap helper method
+- AbstractCellView clones cell attributes in refresh
+
+05-APR-2005: JGraph-5.4.5-Picasso
+
+- Fixes selectable not taken into account if view local
+- Adds helper to JGraph to return the attributes of a cell(view)
+- Corrected event point coordinate scaling in EdgeHandle.mouseDragged
+- Fixes missing refresh if source/target not accepted in EdgeHandle
+- Fixes missing initial extra label-bounds in EdgeRenderer, EdgeView
+- DefaultEdge.clone sets clone ports to original edge ports
+
+28-MAR-2005: JGraph-5.4.4-Picasso
+
+- Adds createGraph, graph accessors, static inner classes in GraphEd
+- Changed GraphLayoutCache.setAllAttributeLocal to setAllAttributesLocal
+- Adds GraphLayoutCache getEdges method that account for visibility
+- Adds GraphLayoutCache.edit shortcut method with nested map parameter
+- Replaced certain setViews calls in EdgeRenderer with assignment of view where
+    setView is called directly afterwards for performance reasons
+- Adds GraphLayoutCache.editCell method for single-cell changes
+- Adds return value to BasicGraphUI.MouseHandler.handleEditTrigger to
+  support invalid hit regions and select cells if editing did not start
+  (Thanks to Timothy Wall from the Abbott project for this fix!)
+- Fixes GraphEd.connect checks against model.acceptsSource and target
+- Adds graph parameter to BasicMarqueeHandler.paint and overlay
+- Adds new static method GraphConstants.merge to merge a nested change into a nested map
+- Adds new method GraphLayoutCache.getNeighbours that returns the neighbours of a cell
+    excluding a set of cells passed in. Has switches for visible cells and
+    direction ( i.e. use outgoing edges only )
+
+14-MAR-2005: JGraph-5.4.3-Picasso
+
+- Changes initial capacity of AttributeMaps to 8 when using empty constructor
+- Changes default array list size to 0 in AbstractGraphCell.childViews
+- Fixes graphChanged and GraphLayoutCacheEdit call reloadRoots after execution
+- Fixes default value for label position in DefaultEdge.checkDefaults
+- Uses new label positioning and moving in EdgeRenderer, EdgeView.EdgeHandle
+- Checks for graph != in EdgeRenderer.getExtraLabelSize, getExtraLabelBounds
+- GraphEd new cells have unique labels
+
+07-MAR-2005: JGraph-5.4.2-Picasso
+
+- GraphEd extends JApplet, uses getContentPane
+- JGraph.updateAutoSize snaps to grid
+- VertexRenderer.paintSelectionBorder restores previous graphics stroke
+- LabelAlongEdge attribute ignores number of control points in EdgeRenderer
+- Ignores ports when removing children cells from view roots
+- Changes previousAttributes default value to null in DefaultGraphModel.GraphModelEdit
+- Changes List to Set in getEdges for performance.
+
+27-FEB-2005: JGraph-5.4.1-Picasso
+
+- Adds HugeGraphTest to examples for performance testing large graphs
+- Changes askLocalAttributes to allAttributeLocal in GraphLayoutCache
+- Removes unnecessary contains calls in model.handleConnection, cache.insertViews, graphChanged
+- GraphEd consumes event after connect to avoid selection of source vertex
+- Moves location of toBack/toFront buttons in GraphEd toolbar
+- GraphEd uses GraphLayoutCache.ungroup method
+- Adds createEdgeAttributes, createGroupCell, createDefaultGraphEdge hooks in GraphEd
+- Fixes GraphLayoutCache.insert no longer overwrites nested attributes
+- Adds port in GraphEd.createDefaultGraphCell, makes createAttribute public
+- BasicGraphUI.getPreferredSize takes inset into account
+- Removes final modifier from defaultdecorationsize in GraphConstants
+- Adds defaultinset static value to GraphConstants
+- Removes orphan port in GraphLayoutCache.ungroup
+- Fixes refresh of collapsed group connections
+- Adds JGraph.snap(Rectangle2D) utility method
+- Adds hiddenCellViews accessor, constructor argument
+- Adds getters for various GraphLayoutCache members
+- Silently ignores exceptions in initOffscreen
+- Adds DefaultGraphModel.cloneCells
+- Fix possible orphan ports
+- Fixes wrong constant-name in GraphConstants.setSelectable (44)
+- Removes default bounds from attribute map
+
+07-FEB-2005: JGraph-5.4-Picasso
+
+- Moves addVisibleDependencies call to setVisibleImpl in GraphLayoutCache
+- Adds static setSource/TargetPort helper methods in DefaultGraphModel
+- Fixes duplicate reference to user object by removing from AttributeMap
+- Moves user object cloning from cell to GraphModel.cloneUserObject
+- Fixes cache.addVisibleDependencies may return null in array
+- JGraph.convertValueOf uses String.valueOf
+- AbstractCellView adds toString, getValue to use cell or local value
+- Adds DefaultGraphModel.getUserObject convenience method
+- Changes SizeHandler.invalidate modifier from private to protected (41)
+- Fixes platform-specific selection modification in BasicGraphUI.isToggleEvent (SF #1110335)
+- Fixes bug in BasicGraphUI.MouseHandler for single-click editing (SF #1110340)
+- Fixes bug in DefaultGraphCellEditor.inHitRegion method (SF #1110340)
+- Adds valueForCellChanged to default model, removes value from storageMap
+- Fixes DefaultGraphModel.getEdges removes descendant edges of passed-in cells from output
+- Fixes possible NPE when removing source/target in non-disconnectable mode (SF #1111989)
+- Uses renderer component to determine tooltip in JGraph.getToolTipText (Thread 894)
+- Clones properties of hidden cells when cloning collapsed groups
+- Adds Abbott-based tests (Thanks to Thimothy Wall!)
+- Renames GraphLayoutCache.hiddenSet to hiddenMapping
+- Adds event listener for GraphLayoutCache, cleans up event model
+- Adds missing methods to GraphModelChange (40)
+- Adds workaround for possible NPE in EdgeRenderer.getPaintBounds (39)
+- Optimizes implementation of selectAll action in BasicGraphUI
+- Fixes edges connected to group cells not updated in partial views
+- Renames groupBorder attribute to inset, default is 0
+- Adds selectable, childrenSelectable, constrained (sizing) attributes
+- Fixes EdgeHandle calls cache.edit if label clicked but not moved
+- Fixes possible NPE in EdgeHandle.mouseDragged (SF #1099828)
+- Resets source and target in EdgeHandle.mouseReleased (SF #1099828)
+- Fixes child positions when dropped with null bounds in GraphTransferHandler
+- Fixes wrong accessor name in GraphLayoutCache.setSelectsLocalInsertedCells
+
+10-JAN-2005: JGraph-5.3.1-Tiger
+
+- Showing connections and parents in GraphLayoutCache.edit
+- Weakens guard condition in GraphLayoutCache.edit
+- Accepts null argument in GraphLayoutCache.insert
+- Adds comments to AttributeMap.applyValue and reorders method
+- Fixes auto-inserted edgeviews have inconsistent state after refresh
+- Adds better default bounds in GraphTransferHandler
+- Refactors updateAutoSize in JGraph
+- VertexView only returns handle if sizeable and not auosized
+- Fixes autosizing for view-local bounds attribute, resize must be view-local, too
+- Updates drop target listener in GraphUI on transferHandler changes
+- Fixes insertEdge, adds insert(Object[]), insertGroup(Object, Object[])
+- DefaultGraphModel.connect ignores old port (connects anyway)
+- Ignores NPE in BasicGraphUI.createHandle
+- Changes insert method signature in GraphLayoutCache
+- Sets VALUE_STROKE_PURE rendering hint in EdgeRenderer.paint
+
+03-JAN-2005: JGraph-5.3-Tiger
+
+- Removes updating of portviews in EdgeView.update
+- PortView.getNextPoint uses point list, not source-/targetgetter
+- Fixes Spline edge-style has wrong arrow size.
+- Fixes Spline edge finishes short of correct end point
+- Refreshes context in GraphLayoutCache.GraphViewChange.execute
+- Adds DefaultGraphModel.cellsChanged for listener notification
+- HelloWorld example uses latest methods from GraphLayoutCache
+- SelectAll selects topmost visible children of invisible groups
+- Fixes missing update on auto-shown connections in layout cache
+- Adds cloning for point list in EdgeView.update
+- Fixes invocation order in GraphLayoutCache.GraphViewEdit.execute
+- Adds a new static class for the GraphTransferHandler
+- Does not user clone for new values in AttributeMap.applyValue
+- Does not clone AttributeMap in AbstractCellView.updateAllAttributes
+- Adds code examples to Javadocs in GraphLayoutCache
+- Adds getEdgesBetween, getIncoming-, getOutgoingEdges etc. to DefaultGraphModel
+- Adds insertVertex, -edge, -group, ungroup, collapse, expand to GraphLayoutCache
+- Adds GraphLayoutCache.insertEdge and insertVertex
+- Adds getter for ROUTING_SIMPLE in GraphConstants
+- Adds context for visible cells in GraphViewEdit.execute
+- Adds ConnectionSet.getPort to find port for edge
+- Adds check for null and default attribute map in setAttributes
+- Checks for valid bounds in DefaultGraphCell.setAttributes
+- Changes constructors in default graph cells
+- Added static DefaultGraphModel.cloneCell for deep cloning
+- Adds setters to SerializablePoint2D and -Rectangle2D
+
+20-Dec-2004: JGraph-5.2.1-Bridgewater
+
+- Adds switch for scaled port drawing to JGraph
+- Fixed BasicGraphUI auto-selection ignores enabled state
+- Fixed possible NPE in DefaultGraphModel.getRoots
+- Adds cell bounds in BasicGraphUI.TransferHandler.importData
+- Adds default value for AbstractCellView.allAttributes
+- Fixes selection of dropped cell hierarchies in BasicGraphUI
+- Fixes missing repaint after GraphLayoutCache.setVisible
+- Renames partial cache connection controlling switches
+- Fixes missing visible dependencies in GraphLayoutCache.edit
+- Fixes NPE in RootHandler if used with invisible cells
+- Adds GraphLayoutCache.getVisibleCells for filtering
+- VertexRenderer ignores focused state in paintSelectionBorder
+- Fixes NPE when cells with connected edges are removed
+- Adds GraphLayoutCache.setInserted for event notification
+- GraphViewEdit calls Observers with inserted cells
+- Adds Object[] to GraphLayoutCache.createLocalEdit
+- Adds select local / all inserted cells in GraphLayoutCache
+- Fixes error in autosizing (in-place autosizing)
+- Fixes grouping hides cells in partial layout caches
+- Fixes missing GraphConstants.DEFAULTFONT (uses Label.font)
+- Adds flag to BasciMarqueeHandler.overlay for clearing
+- Adds BasicMarqueeHandler processMouseDraggedEvent
+- Adds AbstractCellView.setCell, setAttributes
+- Renames AbstractCellView.setAttributes to changeAttributes
+- TransferHandler ignores attributes based on bounds
+- Adds static DefaultGraphModel.getAll(GraphModel)
+- Fixes partial reloading in GraphLayoutCache.setModel
+- Adds constructor for cell view arrays to GraphLayoutCache
+- Makes cell views and GraphLayoutCache fields transient
+- Check and replace model reference in JGraph.setLayoutCache
+- Reuse mapped cellviews in GraphLayoutCache.getModel
+- Adds GraphLayoutCache.editCells, getCellViews, insertClones
+- Adds constructor for layout cache to JGraph
+- Adds empty constructors to cell views
+
+29-Nov-2004: JGraph-5.2-Revelation
+
+- Renamed graph view listener in basic graph ui
+- Fixed unscaled handle size in basic graph ui
+- Extra labels rendered with graph.convertValueToString
+- GraphConstants.setExtraLabels takes Object[], not String[]
+- Made getInitialLocation more stable in BasicGraphUI
+- Removed unused constructor from layout cache
+- Moved setAutoSizeOnValueChanged switch to layout cache
+- Remove from visibleSet, mapping in cache when removed from model
+- Added changed property to layout cache to return modified views
+- Fixed main condition statement in includeInGroupBounds
+- Moved cell view factory into its own default class
+- Added new constructor to default graph model
+- Removed dependency between layout cache and cell views and JGraph
+- Replaced select new cells with select cloned cells
+- AttributeMap clone uses super.clone
+
+12-Oct-2004: JGraph-5.1-Independence
+
+- Added order method to JGraph
+- Removed view-dependent layering
+- Removed unused array inversion loops
+- Add group border attribute with default constant
+- Graph layout cache isOrdered is deprecated (cannot order invisible cells)
+- Fixed graph layout cache's order method
+- EdgeHandle hides handles for edge groups
+- Moved new cell selection to layout cache
+- Added inversion flag to layout cache's order method
+- Clone passed-in cells only in cloneCells (adds no childs)
+- GraphTransferHandler honors disabled property
+- DefaultEdge allows children (edge grouping)
+- Fixed strong typing in ConnectionSet c'tor
+- Fixed constrained edge point editing
+- Added getDefaultPortForCell hook for subclassers
+- GetNextViewAt filters for leaf views (vertices)
+- Added additional edge labels (no in-place edit)
+- Fixed preview flickering in graphed
+- Added jump to floating port switch
+- Updated graphed example and added hooks
+- Added getLeafViewAt, getNextSelectableViewAt
+- GetPortViewAt, GetNextViewAt scales arguments
+
+28-SEP-2004: JGraph-5.0.4-Revolution
+
+- Sync attributes with user object in DefaultGraphCell
+- Fixed flickering in edge connection mode
+- Fixed class cast exception in myportview example
+- Default group border changed to 20 pixels
+
+19-SEP-2004: JGraph-5.0.3-Revolution
+
+- VerteView uses opaque, adds group border
+- Group opaque attribute is used in renderer
+- Group intersection respects opaque mode
+- Using attribute map to handle in-place edits
+- Using attribute map for user object cloning
+- Fixed some bugs in dirty region preview
+- Fixed default port appearance
+
+14-SEP-2004: JGraph-5.0.2-Revolution
+
+- Added supercall to edge renderer paint
+- VertexRenderer respects Opaque mode
+- EdgeRenderer supports gradient paint
+- No gradient vertex rendering in preview mode
+- Provide port magic hook in PortView
+- Minor fixes
+
+12-SEP-2004: JGraph-5.0.1-Revolution
+
+- Removed putMapping and refresh from factory methods
+- Fixed unaccepted mousepoints when over invalid ports
+- Added switch to accept invalid null-ports during previews
+- Added dash offset to GraphConstant to allow moving edge patterns
+- Added gradient background to vertex renderer, graph constants
+- Separated storage attribute maps from transport maps
+- Remove GraphModel.createAttributes, use custom cells instead
+- Added hook to modify (augment) change context in layout cache
+- Added switch to autosize on value changes (in-place edits)
+- Added isMarqueeTrigger, handleMarquee hooks in BasicMarqueeHandler
+- Made GraphLayoutCache.valueForCellChanged more usable
+- Added switch to disable cell selection
+- GraphConstants allows per-axis relative/absolute ports
+- "Port Magic" only if edge is orthogonal (not bezier or spline)
+- Calls getCellEditorValue only if needed in completeEditing
+
+10-JUL-2004: JGraph-5.0-Revolution
+
+- Fixed scrollCellToVisible in-place scaling bug
+- Fixed clear selection on model update bug
+
+24-MAY-2004: JGraph-4.0-Revelation
+
+- Replaced ValueChangeHandler with GraphLayoutCache.valueForCellChanged
+- Moved createPoint, createRect to AttributeMap
+- Added AttributeMap, factory method in GraphModel
+- Fixed GraphEd add/remove point with shift
+- Replaced Map with AttributeMap (major API change)
+
+11-MAY-2004: JGraph-3.4.1-Paris
+
+- Removed GraphConstants.availableKeys
+- Fixed NPE in EdgeHandler.mousePressed (773550)
+- Fixed screen/model coordinates bug in GraphEd (862449)
+- Fixed typo in examples/GraphEd (862455)
+- Fixed accidental cloning in RootHandler (837362)
+- Spline, Bezier linestyles for n points (Thanks to Martin Krueger!)
+- Shift ports only if edge is not routed
+- Include changed parents in selection event
+- Cut, Copy, Paste is disabled on default
+- Cloneable is disabled on default
+
+03-MAY-2004: JGraph-3.4-Paris
+
+- Can handle overlapping edges with a control point (Thanks to Martin Svoboda!)
+- Removed e.consume and check from BasicMarqueeHandler
+- Changed SizeHandle, EdgeHandle to static
+- Moved event hooks from views to handles
+
+26-APR-2004: JGraph-3.3-Zurich
+
+- Added examples to source distribution
+- Added support for view-local attributes
+- Added support for sizeable in-place editors
+- Changed Appearance of non-floating Ports
+- Changed CellViewFactory interface
+- AbstractCellView.getRenderer is now public
+- Added Attribute moveableAxis, sizeableAxis to GraphConstants (2)
+- Fixed possible NPE in JGraph.getCellBounds(Object[])
+
+21-MAR-2004: JGraph-3.2-Lucerne
+
+- In-place editing no longer calls convertValueToString twice
+- DefaultGraphCell.changeAttributes no longer directly sets the user object
+- Added set/isLabelAlongEdge to GraphConstants/EdgeRenderer (845673)
+- DefaultGraphModel.getAttributes(null) returns the model's attributes (737213)
+- Switched to double coordinates (use GraphConstans.createXY)
+- GraphTransferHandler.canImport does not always return true
+- Added moveBelowZero control property to JGraph (890057)
+
+12-JAN-2004: JGraph-3.1-Lucerne
+
+- Moved to Ant build environment
+- Fixed GraphSelectionEvent contains wrong items (834450)
+- Fixed broken Contract in JGraph.getSelectionCount (848439)
+- Fixed error in Edge selection (835950)
+- Renamed PERCENT to PERMILLE in GraphConstants (799536)
+- Replaced direct renderer access in EdgeHandle (788180)
+- Enabled live preview for dragEnabled mode (691135)
+- Added GraphConstants.NEGATIVE_ALLOWED switch (786895)
+- renamed BasicTransferable to BasicGraphTransferable
+- code cleanup
+
+01-SEP-2003: JGraph-3.0-Lucerne
+
+- New package name org.jgraph.* for all classes
+- Cleaned up directory structure (ready for Ant)
+
+-----------------------------------------------------------------------------------------------
+
+04-AUG-2003: JGraph-2.2.2-Lucerne
+
+- New EdgeRenderer.translateGraphics hook for subclassers
+- Fixes for ordered layoutcaches
+- Include ports in cache-dependent order
+- Removed cloned children parent dependency
+- Fixed wrong order in exportData for DnD and clipboard
+
+25-JUL-2003: JGraph-2.2.1-Lucerne
+
+- Fixed cut-paste bug by adding ParentMap to GraphTransferable
+  - Note: Children are removed from their parents upon removal from the model.
+- EdgeView: Cached values are now public
+
+13-JUL-2003: JGraph-2.2-Geneva
+
+- Selection Change: Improved repaint performance (700788)
+- Edge: Improved performance. Thanks to Denis O. Mikhalkin!
+- GraphConstants: Changed IconAttributes type to Icon
+- ParentMap: GraphModel dependency removed -> Model is in charge of computing the changed cells
+- Edgelabel-position now depends on edge direction
+- EdgeView: Don't allow label moves if cell/graph not moveable
+- BasicGraphUI: Using ParentMap when cloning cells
+- VertexRenderer(boolean hideGroups) constructor added
+- ParentMap.clone method added
+- GraphConstants.*_FILLED arrow styles removed
+- EdgeView.beginShape, endShape, lineShape and sharedPath are now public
+- Added getPreviousConnectionset/getPreviousParentMap to GraphModelChange
+- Added JGraph/DefaultGraphModel.getDescendantList in favor of getDescendants
+- DefaultEdge.defaultPoints is now public
+- GraphConstants: Added FONT to availableKeys
+- DefaultGraphCellEditor: Removed clickcount test in isCellEditable
+- BasicGraphUI: Added MouseEvent method to MouseHandler.handleEditTrigger and pass to startEditing method
+- Removed unused FontXY constants from GraphConstants
+
+12-MAY-2003: JGraph-2.1.1-Geneva
+
+- Added bean method to ConnectionSet for XMLEncoder
+- Added Null-Check to isCellEditable
+- Fixed shared points bug in DefaultEdge (see https://sourceforge.net/tracker/?func=detail&atid=435210&aid=710799&group_id=43118)
+- Block autosizing in JGraph when the graph is being edited
+
+17-MAR-2003: JGraph-2.1-Geneva
+
+- Added new rel/version file that reflects the current working version (used by all *.sh and *.bat scripts)
+- Added automated source code checking in build script using PMD (http://pmd.sf.net), target name = checksrc
+- ParentMap does not use TreeNode interface anymore, uses GraphModel instead
+- Fixed possible NPE in paintCell (see http://sourceforge.net/forum/message.php?msg_id=1919609)
+- Fixed NPE in BasicGraphUI.MouseHandler.mouseDragged and mouseReleased
+- Replaced fontStyle, fontName and fontSize by single font bean property (http://sourceforge.net/tracker/?func=detail&atid=537692&aid=694387&group_id=43118)
+- Added null test to JGraph.getCellBounds (see http://sourceforge.net/forum/forum.php?thread_id=823687&forum_id=140880)
+- Changed API to allow Vertex/Port combined cells (see http://sourceforge.net/forum/forum.php?thread_id=821998&forum_id=140879)
+- Changed XORMode color in EdgeHandle, SizeHandle and RootHandle (see http://sourceforge.net/tracker/index.php?func=detail&aid=677743&group_id=43118&atid=435210)
+- handleParentMap at DefaultGraphModel updated for user defined Cells 
+- Added getParentMap and getConnectionSet to DefaultGraphModel.GraphModelEdit (see http://sourceforge.net/tracker/?func=detail&aid=675521&group_id=43118&atid=435210)
+- DefaultGraphModel.contains does not use DefaultMutableTreeNode. Use getParent method instead
+- Fixed BasicGraphUI.paintGrid, min. grid size is 2 pixels (see http://sourceforge.net/tracker/index.php?func=detail&aid=677748&group_id=43118&atid=435210)
+- Fixed BasicGraphUI.MouseHandler.mousePressed (see http://sourceforge.net/tracker/index.php?func=detail&aid=680124&group_id=43118&atid=435210)
+- Test marquee != null in BasicGraphUI.paint
+- DNDPreview problem is solved in J2SDK1.4.1_01 (no preview for double buffering, but no freezing either)
+- Limit number of visible relations to MAXCELLS for live preview
+- Check for nullpointer in BasicGraphUI.isConstrainedMoveEvent
+- Fit up to Java 1.4 (Marked relevant lines with //JAVA13 and moved TransferHandler.java to /rel directory, updated Makefiles)
+- PortRenderer.getRendererComponent now absorbs the focus argument (see http://sourceforge.net/tracker/?func=detail&aid=683388&group_id=43118&atid=435210)
+- Added reference to GraphModel in ParentMap (Thanks to Michael Lawley!)
+- Added GraphModel.isPort, GraphModel.isEdge (Thanks to Michael Lawley!)
+- Moved JGraph.cloneCells implementation to GraphModel (Thanks to Michael Lawley!)
+- Added NULL-check on oldBounds in AbstractCellView.setBounds
+- Added explicit setBounds(map, bounds) in GraphConstants.translate(map, int, int)
+- Handle Java-Bug in large zoom levels in VertexRenderer.paint (Bug: Zero length string passed to TextLayout constructor)
+- Use GraphModel interface in BasicGraphUI.MouseHandler.mouseReleased (see http://sourceforge.net/tracker/?func=detail&atid=435210&aid=671137&group_id=43118)
+- Added JGraph.setGridStyle and improved grid/zoom integration (Thanks to Claudio Rosati!)
+- GraphConstants.translate: Do not go into negative coordinates (see http://sourceforge.net/forum/message.php?msg_id=1842610)
+- EdgeHandle/SizeHandle: Do not go into negative coordinates (dito)
+
+01-FEB-2003: JGraph-2.0-Geneva
+
+- Rounding erros on large zoom levels removed
+- GraphConstants.createPropertyMap removed
+- GraphModel.isOrdered removed
+- GraphModel.isAttributeStore removed
+- GraphConstants.is/setVisible removed
+- CellRenderer.supportsAttribute removed
+- AbstractCellView.isControlAttribute removed
+- VertexRenderer.is/setHideGroups added
+- BasicGraphUI.is/setSnapSelectedView added
+- Edge.Routing added
+- GraphConstants.ROUTING_SIMPLE added
+- DefaultEdge.DefaultRouting class added
+- GraphConstants.get/setRouting added
+- GraphConstants.createAttributes added
+- GraphLayoutCache.reset, is/setVisible, partial, ordered added
+- DefaultGraphModel.getSource/TargetVertex added
+- GraphLayoutCache.hiddenSet added
+- JGraph.VERSION (use JGraph -version) added
+- VertexRenderer.paintSelectionBorder added
+- Provide a handleEditTrigger Hook in BasicGraphUI.MouseHandler added
+- GraphView renamed to GraphLayoutCache
+- GraphLayoutCache.toBack/toFront take cells as arguments
+- JGraph.get/setView renamed to JGraph.get/setGraphLayoutCache
+- JGraph.SnapSize renamed to Tolerance (including getter, setter etc.)
+- JGraph.convertValueToString support view-local values
+- DefaultGraphCell.setAttributes renamed to changeAttributes
+- Port.add/remove renamed to Port.addEdge/removeEdge (see http://sourceforge.net/forum/forum.php?thread_id=773281&forum_id=140880)
+- GraphConstants.ARROW prefix added to arrow styles
+- GraphConstants.STYLE prefix added to line styles
+- getPerimterPoint method was moved to the renderer
+- GraphViewChange.getAttributeMap renamed to getAttributes
+- GraphModelChange.getStoredAttributeMap renamed to getPreviousAttributes
+- DefaultGraphModel.handlePropertyMap renamed to handleAttributes
+- importData may return false to signal sender to not remove cells
+- DefaultGraphSelectionModel.isChildrenSelectable now supports a cell argument
+- Rounding erros on large zoom levels removed (Thanks to Jenya!)
+- The maximum number of edges to paint in live-preview is now MAXCELLS
+- EdgeHandle does now support the SHIFT-key for constrained moving
+- Added some accessor methods to BasicMarqueeHandler for subclassers
+- BasicGraphUI.PropertyChangeListener calls repaint after GraphLayoutCache change
+- JGraph.setGraphLayoutCache checks and updates the cache's model if necessary
+- Vertices are not removed when their last port is removed dynamically
+- EdgeRenderer now cached the created Shape in the corresponding EdgeView
+- BasicGraphUI.isDescendant uses GraphModel interface to return its data
+- Live preview during real DND (only for JDK < 1.4.0, see BasicGraphUI line 28)
+- DefaultEdge.constructor offers user object und boolean (allows children)
+- JGraph.disconnectOnMove must check the CONNECTABLE/DISCONNECTABLE attributes
+- Vertex, Port and Edge may carry the CONNECTABLE/DISCONNECTABLE attributes
+- NPE on edge change when new the port was not visible in other view removed
+- Groups may contain ports (Concurrency side-effects in EdgeRenderer.createShape)
+- Cache the bounds property of groups and recompute on change of children only
+- GetBounds-Infinite-Loop solved by exluding childedges between childs to group
+- Propagate CellView.update to parent instead of child (bubble up)
+- TransferHandler now supports move and DnD across multiple views, models and JVMS
+- Clone edges when reconnected and the Control key is pressed
+- ExecutableGraphChange interface added to execute all changes in model (Delegation)
+- In-place editing from empty to non-empty content is incorrectly undone
+- Removed in-place manipulation of BOUNDS-attribute in SizeHandle and RootHandle
+- Changed execution order of compound edits: first model then args in-order
+- Use GraphModel interface in DefaultGraphModel.getRoots only (no typecast)
+- GraphLayoutCache.getMapping may return null (if cell is not visible)
+- GraphUndoManager.redo throws CannotRedoException instead of CannotUndoException
+- Handles.initOffscreen is protected instead of package private
+
+06-JAN-2003: JGraph-1.0.7-Valencia
+
+- DefaultGraphSelectionModel.CellPlaceHolder is now a protected inner class with public accessors (see http://sourceforge.net/forum/forum.php?thread_id=780577&forum_id=140880)
+- DefaultGraphCell.getChildren never returns null (see http://sourceforge.net/forum/forum.php?thread_id=780591&forum_id=140880)
+- SizeHandle/RootHandle double buffer members are now protected (see http://sourceforge.net/forum/message.php?msg_id=1773109)
+- dependency between isMoveable, isAutosize and isSizeable was removed. (see http://sourceforge.net/forum/forum.php?thread_id=770111&forum_id=140880)
+- focus argument and childrenSelected are handled separately by renderer (see http://sourceforge.net/forum/forum.php?thread_id=773281&forum_id=140880)
+- focused cell's highlight color is different from other selected cells (see http://sourceforge.net/forum/forum.php?thread_id=773281&forum_id=140880)
+
+18-NOV-2002: JGraph-1.0.6-Madrid
+
+- Updated CVS Repository and Distribution directory structure
+- New Distribution Files (Readme, News, ChangeLog, ...)
+- Ant-compatible Build Scripts
+- Script-based Automatic Core Migration to Java 1.4
+- Reformated source code
+- Reorganized Java imports
+
+13-JUN-2002: JGraph-1.0.5-Malaga
+
+- Scaled importData
+- InvokesStopCellEditing
+- Remove update from AbstractCellView.constructor
+- Move AbstractCellView.update call to subconstructor
+- Font Style/Size for default font
+- Typetest in DefaultGraphModel.getChild
+- Group Resize overrides Size protection
+- Group Resize overrides Position protection
+- GraphConstants.applyMap: undoMap removed
+- AbstractCellView uses createMap
+- DefaultGraphCell uses createMap
+
+06-JUN-2002: JGraph-1.0.4-Xinzo
+
+- GraphModelEdit.getStoredAttributeMap
+- Paints released Clone-Mode during Move
+- GraphModelEdit.handleEmptyGroups
+- DefaultGraphModel.createLayerEdit
+- public GraphViewLayerEdit.execute
+
+28-MAY-2002: JGraph-1.0.3-Zaragoza
+
+Initial Release
